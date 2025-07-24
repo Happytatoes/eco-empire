@@ -1,0 +1,258 @@
+#background {
+	background: linear-gradient(0deg, #afa, #000);
+	height: 1800px;
+}
+#title {
+	color: #ffffff; 
+	font-size: 75px;
+	font-family: monospace;
+	font-weight: 600;
+	display: block;
+	margin-right: left;
+	margin-left: right;
+	text-align: center;
+	height: 50px;
+	padding: 0px;
+}
+#sub {
+	color: #ffffff; 
+	font-size: 40px;
+	font-family: monospace;
+	font-weight: 600;
+	display: block;
+	margin-right: left;
+	margin-left: right;
+	text-align: center;
+	height: 50px;
+}
+#copyright {
+	line-height: 50px;
+	padding: 10px;
+	color: #ffffff;
+	font-size: 15px;
+	font-family: monospace;
+	display: block;
+	margin-right: 20px;
+	margin-left: 20px;
+	text-align: left;
+}
+.info {
+	line-height: 50px;
+	padding: 10px;
+	color: #ffffff;
+	font-size: 15px;
+	font-family: monospace;
+	display: block;
+	margin-right: 10px;
+	margin-left: 10px;
+	text-align: center;
+}
+#warnings {
+	line-height: 50px;
+	padding: 10px;
+	color: #ffffff;
+	font-size: 15px;
+	font-family: monospace;
+	display: block;
+	margin-right: left;
+	margin-left: right;
+	text-align: center;
+}
+.box {
+	padding: 5px;
+	font-family: monospace;
+	display: flex;
+	background-color: #ffffff;
+	margin-right: auto;
+	margin-left: auto;
+	height: 65px;
+	width: 65px;
+}
+.row {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	width: 350px;
+}
+.button {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	width: 75px;
+	border-color: #000;
+	color: #000;
+	font-family: monospace;
+}
+.button:hover {
+	background-color: #8ac;
+}
+.image {
+	width: 65px;
+}
+#generate {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 35px;
+	font-family: monospace;
+}
+#change1 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 15px;
+	font-family: monospace;
+}
+#change2 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 15px;
+	font-family: monospace;
+}
+#change3 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 15px;
+	font-family: monospace;
+}
+#change4 {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 15px;
+	font-family: monospace;
+}
+#generate:hover {
+	background-color: #8ac;
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 35px;
+}
+.disply {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	font-family: monospace;
+	font-size: 20px;
+}
+#displayrow {
+	width: 600px;
+	background-color: #fff;
+}
+#day {
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+#dayword {
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+#displyid {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+}
+.disply:hover {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 1fr;
+	text-align: center;
+}
+#money {
+	color: #280;
+	font-family: monospace;
+}
+#fact {
+	color: #280;
+	font-family: monospace;
+}
+#pollution {
+	color: #280;
+	font-family: monospace;
+}
+#worker {
+	color: #280;
+	font-family: monospace;
+}
+#moneypergen {
+	color: #280;
+	font-family: monospace;
+}
+#pollutionpergen {
+	color: #f00;
+	font-family: monospace;
+}
+#buttonrow {
+	font-size: 15px;
+}
+#wage {
+	color: #280;
+}
+#price {
+	color: #280;
+}
+#workersat {
+	color: #280;
+}
+#customersat {
+	color: #280;
+}
+#energy {
+	color: #280;
+}
+#units {
+	font-size: 10px;
+}
+#play {
+	font-size: 25px;
+}
+.addbutton {
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 20px;
+	border-radius: 20%;
+	border-color: #080;
+	color: #040;
+	text-align: center;
+	justify-items: center;
+	font-family: monospace;
+}
+#leftdiv {
+	width: 50%; 
+	float: left;
+}
+
+#rightdiv {
+	width: 50%; 
+	float: right;
+}
+@media (max-width: 1150px){
+	#leftdiv {
+		display: block;
+		width: 100%; 
+		float: center;
+	}
+	#rightdiv {
+		display: block;
+		width: 100%; 
+		float: center;
+	}
+	.disply {
+		font-size: 15px;
+	}
+	#displayrow {
+		width: 500px;
+	}
+	#background {
+		height: 2575px;
+	}
+}

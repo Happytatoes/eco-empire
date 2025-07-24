@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="background">
+        <img>
+        <p id="copyright">A Noah Wong/Happytatoes.com game</p>
+        <p id="title">EcoEmpire</p>
+        <p id="sub">Sustainable Power Plant Tycoon</p>
+        <div id="infodiv">
+            <p class="info" id="info1">EcoEmpire is a sustainable twist on a classic venture-capitalist tycoon game. It considers factors like fair wages, worker satisfaction, and environmental impact while still understanding the nuance that "saving the world" is not easy and takes funding and diligence. Navigate the complex world of energy and try to generate profits while maintaining sustainable environmental practices and working conditions.</p>
+            <p class="info" id="info2">Don't let pollution reach 1000! Don't let worker satisfaction drop below 50! Don't let customer satisfaction drop below 50! Don't go in debt! These issues will hurt profit! If you are over 5000 dollars in debt, you will not be able to go into more debt and purchase anything.</p>
+            <p class="info" id="info3">The "generate" button passes one day in time. Win the game by reducing pollution to net zero.</p>
+            <p class="info" id="info4">Bonus challenge: try to win the game in less than a year, or see how you can mininize the time it takes to reach zero pollution.</p>
+        </div>
+        <button class="button" id="play" onclick="play()">PLAY</button>
+        <div id="centerdiv">
+
+            <div id="leftdiv">
+    
+                <div class="row" id="genrow">
+                    <button id="generate" onClick="generate()">generate</button>
+                    <p id="dayword" class="disply">Day: <p>
+                    <p id="day" class="disply">0</p>
+                </div>
+                <div class="row" id="buttonrow">
+                    <button id="change1" onclick="increaseWage()">Increase Wage</button>
+                    <button id="change2" onclick="decreaseWage()">Decrease Wage</button>
+                    <button id="change3" onclick="increasePrice()">Increase Price</button>
+                    <button id="change4" onclick="decreasePrice()">Decrease Price</button>
+                </div>
+                <br>
+                <div id="displyid">
+                    <div class="row" id="displayrow">
+                        <p id="pollutionword" class="disply">Pollution:</p>
+                        <p id="pollution" class="disply">100</p>
+                        <p id="pollutionword" class="disply">Pollution per day:</p>
+                        <p id="pollutionpergen" class="disply">16</p>
+                    </div>
+                    <br>
+                    <div class="row" id="displayrow">
+                        <p id="moneyword" class="disply">Money:</p>
+                        <p id="money" class="disply">0</p>
+                        <p id="moneyword" class="disply">Profit per day:</p>
+                        <p id="moneypergen" class="disply">16</p>
+                    </div>
+                    <div class="row" id="displayrow">
+                        <p id="workerword" class="disply">Wage:</p>
+                        <p id="wage" class="disply">10</p>
+                        <p id="workerword" class="disply">Worker Satisfaction:</p>
+                        <p id="workersat" class="disply">75</p>
+                    </div>
+                    <div class="row" id="displayrow">
+                        <p id="workerword" class="disply">Price:</p>
+                        <p id="price" class="disply">10</p>
+                        <p id="workerword" class="disply">Customers:</p>
+                        <p id="customersat" class="disply">75</p>
+                    </div>
+                    <div class="row" id="displayrow">
+                        <p id="energyword" class="disply">Energy Output: </p>
+                        <p id="energy" class="disply">16</p>
+                        <p id="factword" class="disply">Power Plants: </p>
+                        <p id="fact" class="disply">16</p>
+                    </div>
+                </div>
+                <div id="add">
+                    <button id="addwind" class="addbutton">Add windmill ($2500) (+5 power)</button><br>
+                    <button id="addsolar" class="addbutton">Add solar panel ($1500) (+3 power)</button><br>
+                    <button id="adddam" class="addbutton">Add hydroelectric dam ($1000) (+2 power)</button><br>
+                    <button id="addbio" class="addbutton">Add biomass plant ($500) (+1 power)</button>
+                </div>
+                <br>
+            </div>
+            <div id="rightdiv">   
+                
+                <div id="game">
+                    <div class="row" id="row1">
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/ks7n_fIXKsJw4E9hET6gwqKxsl_LHv5hk14bzl9GMqGh1dgnN5UEId8Kcyhn6XyFvTiB7A-aXVhNemFXUDWdz-nvDEfjUA6V_giuApezDJxQsS-stY0w1UHQBE-dZr5EAM4tOGHo6A=w2400"
+                                id="i1-1" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/QqqTv0m2AVzktDQZjooTDbMqEaA6wgl7-_0h0iiG3rdxqb1dbHFoneFplAyc24MHoiEoqJgDgufgMEszNFEdFaFKAuVbIDW9kFfaLXchSyr7-er2ofAiSaqsXm2CzgE-U0Oo-F7a0w=w2400"
+                                id="i1-2" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/IH2vhYulweejFEvL6OytoiRspzWqn8C9e79z1I3-mj5DQrzRVyJhD8W_j-DJ8A-sJljK3FzZE4rRnpBE0aedkbbzaQvPnbKJIKJPuKR2HF6ppsKyAjnc8UtlWf1Gg79wIPBEHAh87g=w2400"
+                                id="i1-3" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/55iA6digDgjQ0aaHMW3q0yVUL2Hb4nZDJfGPRlrAQACxaZReQJAZ9gCp9NF3WSMrTL_IBbFKGjxXErry5Sa7JAY4mexFHzpdsQdRz03S0Wk6U-7wSoF-cTO-4MaI9xF6_Wi4DL5E8w=w2400"
+                                id="i1-4" class="image">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="button" onclick="clicked(1, 1)" id="b1-1">remove oil plant ($1000)</button>
+                        <button class="button" onclick="clicked(1, 2)" id="b1-2">remove coal plant ($1500)</button>
+                        <button class="button" onclick="clicked(1, 3)" id="b1-3">remove gas plant ($500)</button>
+                        <button class="button" onclick="clicked(1, 4)" id="b1-4">remove fracking plant ($2500)</button>
+                    </div>
+                    <br>
+                    <div class="row" id="row1">
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/55iA6digDgjQ0aaHMW3q0yVUL2Hb4nZDJfGPRlrAQACxaZReQJAZ9gCp9NF3WSMrTL_IBbFKGjxXErry5Sa7JAY4mexFHzpdsQdRz03S0Wk6U-7wSoF-cTO-4MaI9xF6_Wi4DL5E8w=w2400"
+                                id="i2-1" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/IH2vhYulweejFEvL6OytoiRspzWqn8C9e79z1I3-mj5DQrzRVyJhD8W_j-DJ8A-sJljK3FzZE4rRnpBE0aedkbbzaQvPnbKJIKJPuKR2HF6ppsKyAjnc8UtlWf1Gg79wIPBEHAh87g=w2400"
+                                id="i2-2" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/QqqTv0m2AVzktDQZjooTDbMqEaA6wgl7-_0h0iiG3rdxqb1dbHFoneFplAyc24MHoiEoqJgDgufgMEszNFEdFaFKAuVbIDW9kFfaLXchSyr7-er2ofAiSaqsXm2CzgE-U0Oo-F7a0w=w2400"
+                                id="i2-3" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/ks7n_fIXKsJw4E9hET6gwqKxsl_LHv5hk14bzl9GMqGh1dgnN5UEId8Kcyhn6XyFvTiB7A-aXVhNemFXUDWdz-nvDEfjUA6V_giuApezDJxQsS-stY0w1UHQBE-dZr5EAM4tOGHo6A=w2400"
+                                id="i2-4" class="image">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="button" onclick="clicked(2, 1)" id="b2-1">remove fracking plant ($2500)</button>
+                        <button class="button" onclick="clicked(2, 2)" id="b2-2">remove gas plant ($500)</button>
+                        <button class="button" onclick="clicked(2, 3)" id="b2-3">remove coal plant ($1500)</button>
+                        <button class="button" onclick="clicked(2, 4)" id="b2-4">remove oil plant ($1000)</button>
+                    </div>
+                    <br>
+                    <div class="row" id="row1">
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/QqqTv0m2AVzktDQZjooTDbMqEaA6wgl7-_0h0iiG3rdxqb1dbHFoneFplAyc24MHoiEoqJgDgufgMEszNFEdFaFKAuVbIDW9kFfaLXchSyr7-er2ofAiSaqsXm2CzgE-U0Oo-F7a0w=w2400"
+                                id="i3-1" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/55iA6digDgjQ0aaHMW3q0yVUL2Hb4nZDJfGPRlrAQACxaZReQJAZ9gCp9NF3WSMrTL_IBbFKGjxXErry5Sa7JAY4mexFHzpdsQdRz03S0Wk6U-7wSoF-cTO-4MaI9xF6_Wi4DL5E8w=w2400"
+                                id="i3-2" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/ks7n_fIXKsJw4E9hET6gwqKxsl_LHv5hk14bzl9GMqGh1dgnN5UEId8Kcyhn6XyFvTiB7A-aXVhNemFXUDWdz-nvDEfjUA6V_giuApezDJxQsS-stY0w1UHQBE-dZr5EAM4tOGHo6A=w2400"
+                                id="i3-3" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/IH2vhYulweejFEvL6OytoiRspzWqn8C9e79z1I3-mj5DQrzRVyJhD8W_j-DJ8A-sJljK3FzZE4rRnpBE0aedkbbzaQvPnbKJIKJPuKR2HF6ppsKyAjnc8UtlWf1Gg79wIPBEHAh87g=w2400"
+                                id="i3-4" class="image">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="button" onclick="clicked(3, 1)" id="b3-1">remove coal plant ($1500)</button>
+                        <button class="button" onclick="clicked(3, 2)" id="b3-2">remove fracking plant ($2500)</button>
+                        <button class="button" onclick="clicked(3, 3)" id="b3-3">remove oil plant ($1000)</button>
+                        <button class="button" onclick="clicked(3, 4)" id="b3-4">remove gas plant ($500)</button>
+                    </div>
+                    <br>
+                    <div class="row" id="row1">
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/IH2vhYulweejFEvL6OytoiRspzWqn8C9e79z1I3-mj5DQrzRVyJhD8W_j-DJ8A-sJljK3FzZE4rRnpBE0aedkbbzaQvPnbKJIKJPuKR2HF6ppsKyAjnc8UtlWf1Gg79wIPBEHAh87g=w2400"
+                                id="i4-1" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/ks7n_fIXKsJw4E9hET6gwqKxsl_LHv5hk14bzl9GMqGh1dgnN5UEId8Kcyhn6XyFvTiB7A-aXVhNemFXUDWdz-nvDEfjUA6V_giuApezDJxQsS-stY0w1UHQBE-dZr5EAM4tOGHo6A=w2400"
+                                id="i4-2" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/55iA6digDgjQ0aaHMW3q0yVUL2Hb4nZDJfGPRlrAQACxaZReQJAZ9gCp9NF3WSMrTL_IBbFKGjxXErry5Sa7JAY4mexFHzpdsQdRz03S0Wk6U-7wSoF-cTO-4MaI9xF6_Wi4DL5E8w=w2400"
+                                id="i4-3" class="image">
+                        </div>
+                        <div class="box">
+                            <img src="https://lh3.googleusercontent.com/QqqTv0m2AVzktDQZjooTDbMqEaA6wgl7-_0h0iiG3rdxqb1dbHFoneFplAyc24MHoiEoqJgDgufgMEszNFEdFaFKAuVbIDW9kFfaLXchSyr7-er2ofAiSaqsXm2CzgE-U0Oo-F7a0w=w2400"
+                                id="i4-4" class="image">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="button" onclick="clicked(4, 1)" id="b4-1">remove gas plant ($500)</button>
+                        <button class="button" onclick="clicked(4, 2)" id="b4-2">remove oil plant ($1000)</button>
+                        <button class="button" onclick="clicked(4, 3)" id="b4-3">remove fracking plant ($2500)</button>
+                        <button class="button" onclick="clicked(4, 4)" id="b4-4">remove coal plant ($1500)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
