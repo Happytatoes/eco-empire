@@ -22,7 +22,7 @@ In Eco Empire, users must make decisions about power generation, energy investme
 
 ## Purpose
 
-This project was built for fun as an independent learning exercise. It explores how gamification can be used to teach sustainability and basic economic modeling concepts in an engaging way.
+This project was built for fun as an independent learning exercise. It explores how games can be used to teach sustainability and basic economic modeling concepts in an engaging way.
 
 ## Getting Started
 
